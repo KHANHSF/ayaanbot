@@ -29,15 +29,9 @@ jobs:
         run: sed -i "s/TokenTimeIsBackBuddyss/${{ secrets.LICHESS_KEY }}/g" config.yml
 
       - name: Download and Extract Stockfish
-        run: |
-          mkdir -p ./engines
-          wget -O stockfish.zip http://abrok.eu/stockfish/latest/linux/stockfish_x64_avx2.zip
-          unzip stockfish.zip -d ./engines
-          ls -l ./engines
-          mv ./engines/stockfish_*_x64_avx2 ./engines/stockfish-ubuntu-x86-64-avx2
-          chmod +x ./engines/stockfish-ubuntu-x86-64-avx2
-          rm stockfish.zip
+        run: chmod +x ./engines/chatgpt_ai_chess-linux-x64
 
       # Run the bot
       - name: Running bot
-        run: python3 user_interface.py "tournament VVA9gTFX"
+        run: python3 user_interface.py "matchmaking"
+
