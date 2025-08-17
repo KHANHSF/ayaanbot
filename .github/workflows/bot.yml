@@ -33,5 +33,6 @@ jobs:
 
       # Run the bot
       - name: Running bot
-        run: python3 user_interface.py "matchmaking"
+        run: python3 user_interface.py "challenge NimsiluBot"
+
 
