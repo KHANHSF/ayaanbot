@@ -29,10 +29,11 @@ jobs:
         run: sed -i "s/TokenTimeIsBackBuddyss/${{ secrets.LICHESS_KEY }}/g" config.yml
 
       - name: Download and Extract Stockfish
-        run: chmod +x ./engines/chatgpt_ai_chess-linux-x64
+        run: chmod +x ./engines/jellyfish
 
       # Run the bot
       - name: Running bot
-        run: python3 user_interface.py "challenge NimsiluBot"
+        run: python3 user_interface.py "matchmaking"
+
 
 
